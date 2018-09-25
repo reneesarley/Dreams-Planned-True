@@ -4,7 +4,6 @@ const UpcomingTasks = () => {
   return(
     <div>These are the upcoming tasks</div>
   );
-
 }
 
 export default UpcomingTasks;
