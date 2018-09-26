@@ -11,15 +11,11 @@ class NavBar extends Component {
       <div className='navbar-fixed'>
         <nav>
           <div className="nav-wrapper blue-grey darken-3">
-            <a href="#modal1" style={styles.logo}>dreams planned true</a>
+            <a href="/"  style={styles.logo}>dreams planned true</a>
             <SignedInLinks/>
           </div>
         </nav>
-        <Modal id="modal1" className="modal">
-         <div className="modal-content">
-           <CreateDream/>
-         </div>
-       </Modal>
+          <CreateDream/>
       </div>
     );
   }
@@ -29,7 +25,7 @@ const styles = {
     logo: {
       paddingLeft: 10,
       fontSize: 17,
-     }
+    }
    }
 
 export default NavBar;
