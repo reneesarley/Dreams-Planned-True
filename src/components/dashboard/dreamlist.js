@@ -3,7 +3,7 @@ import DreamCard from '../dreams/dreamCard'
 const DreamList = () => {
   return(
     <div>
-      <h5>Dreams</h5>
+      <h5>dreams</h5>
       <div className="row">
         <DreamCard/>
         <DreamCard/>
