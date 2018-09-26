@@ -1,3 +1,5 @@
+import authReducer from '../../reducers/auth-reducer';
+
 describe('authReducer', () => {
 
   test('Temporary dummy test: two plus two is four', () => {
