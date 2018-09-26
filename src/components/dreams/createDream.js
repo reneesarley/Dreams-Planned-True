@@ -3,7 +3,6 @@ import { Modal } from 'react-materialize';
 
 const CreateDream = () => {
   return(
-    <Modal>
     <div className="row">
       <form className="col s12">
         <div className="row">
@@ -18,7 +17,6 @@ const CreateDream = () => {
         </div>
       </form>
     </div>
-  </Modal>
   );
 }
 export default CreateDream;
