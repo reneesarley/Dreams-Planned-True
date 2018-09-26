@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UpcomingTasks from './upcomingtasks';
+import UpcomingToDos from './upcomingtodos';
 import DreamList from './dreamlist';
 
 class Dashboard extends Component{
@@ -10,7 +10,7 @@ class Dashboard extends Component{
           <DreamList/>
         </div>
         <div className='col s3'>
-          <UpcomingTasks/>
+          <UpcomingToDos/>
         </div>
       </div>
 
