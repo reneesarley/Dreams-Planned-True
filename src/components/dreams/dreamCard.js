@@ -6,7 +6,7 @@ import {Modal, Icon} from 'react-materialize';
 
 const DreamCard = () => {
   return(
-    <div className='col s6 m4'>
+    <div className='col s6 m6'>
       <Modal
         header='Dream Details'
         trigger={<a waves='light'>
@@ -33,8 +33,8 @@ const styles = {
     objectFit: 'cover',
   },
   dreamTitle:{
-    fontSize: '1em',
-    bottom: '70%',
+    fontSize: '1.1em',
+    bottom: '80%',
     padding: '3px',
     backgroundColor: 'rgba(38,50,56, 0.4)',
     width: '100%'
