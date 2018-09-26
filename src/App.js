@@ -11,17 +11,26 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="container">
+        <div>
           <NavBar/>
-          <Switch>
-            <Route exact path='/' component={Dashboard}/>
-            <Route path='/dreamdetails/:id' component={DreamDetails}/>
-            <Route path='/profile' component={Profile}/>
-            <Route path = '/createdream' component={CreateDream}/>
-          </Switch>
+          <div className="container" style={styles.container}>
+            <Switch>
+              <Route exact path='/' component={Dashboard}/>
+              <Route path='/dreamdetails/:id' component={DreamDetails}/>
+              <Route path='/profile' component={Profile}/>
+              <Route path = '/createdream' component={CreateDream}/>
+            </Switch>
+          </div>
         </div>
       </BrowserRouter>
     );
+  }
+}
+
+const styles={
+  container:{
+    width: '95%',
+    paddingTop: '20px'
   }
 }
 

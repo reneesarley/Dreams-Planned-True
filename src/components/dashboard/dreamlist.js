@@ -1,8 +1,16 @@
 import React from 'react';
-
+import DreamCard from '../dreams/dreamCard'
 const DreamList = () => {
   return(
-    <div>This is the dreamlist</div>
+    <div>
+      <div className="row">
+        <DreamCard/>
+        <DreamCard/>
+        <DreamCard/>
+        <DreamCard/>
+        <DreamCard/>
+      </div>
+    </div>
   );
 
 }

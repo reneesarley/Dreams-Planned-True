@@ -2,7 +2,10 @@ import React from 'react';
 
 const SignedOutLinks = () => {
   return(
-    <div>Signed in links will go here</div>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+    </ul>
   );
 
 }
