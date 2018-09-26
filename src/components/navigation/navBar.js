@@ -8,7 +8,7 @@ class NavBar extends Component {
     return (
       <div className='navbar-fixed'>
         <nav>
-          <div className="nav-wrapper teal darken-4">
+          <div className="nav-wrapper blue-grey darken-3">
             <a href="#" style={styles.logo}>dreams planned true</a>
             <SignedInLinks/>
           </div>
