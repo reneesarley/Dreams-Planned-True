@@ -17,7 +17,6 @@ class NavBar extends Component {
         </nav>
         <Modal id="modal1" className="modal">
          <div className="modal-content">
-           this is also content
            <CreateDream/>
          </div>
        </Modal>

@@ -10,12 +10,13 @@ const CreateDream = () => {
             <input placeholder="ie. buy a house, or run a marathon" id="dreamName" type="text" className="validate"/>
             <label htmlFor="dream name">give your dream a short name</label>
           </div>
-          <div className="input-field col s6">
-            <input id="last_name" type="text" className="validate"/>
-            <label htmlFor="last_name">Last Name</label>
-          </div>
         </div>
       </form>
+      <div className='modal-footer'>
+        <a href='/' className='modal-close btn lime'>add dream</a>
+        <a href='/' className='modal-close btn lime'>start planning now</a>
+      </div>
+
     </div>
   );
 }
