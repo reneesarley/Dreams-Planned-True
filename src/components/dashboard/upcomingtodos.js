@@ -1,5 +1,6 @@
 import React from 'react';
 import ToDo from './toDo';
+import {Modal, Button} from 'react-materialize';
 
 const UpcomingToDos = () => {
   return(
@@ -7,6 +8,16 @@ const UpcomingToDos = () => {
 
       <div style={styles.todoColumn} className='white'>
       <h5>to do</h5>
+
+      <Modal
+        header='to do details'
+        trigger={<a waves='light'>
+          <ToDo/>
+        </a>}>
+        <div>
+            this is a test of the to do details modal
+        </div>
+      </Modal>
         <ToDo/>
         <ToDo/>
         <ToDo/>
