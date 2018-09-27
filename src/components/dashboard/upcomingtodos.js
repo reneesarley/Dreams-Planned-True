@@ -1,6 +1,6 @@
 import React from 'react';
 import ToDo from './toDo';
-import {Modal, Button} from 'react-materialize';
+import { Modal } from 'react-materialize';
 
 const UpcomingToDos = () => {
   return(

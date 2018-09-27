@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import SignedInLinks from './signedInLinks';
 import SignedOutLinks from './signedOutLinks';
 import CreateDream from '../dreams/createDream';
-import { Modal } from 'react-materialize';
 
 
 class NavBar extends Component {

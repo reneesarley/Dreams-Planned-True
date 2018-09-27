@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../../images/house.jpg';
 import DreamDetails from './dreamDetails';
-import {Modal, Icon} from 'react-materialize';
+import {Modal} from 'react-materialize';
 
 
 const DreamCard = () => {

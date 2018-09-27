@@ -8,8 +8,17 @@ import CreateDream from './components/dreams/createDream';
 import './App.css';
 
 class App extends Component {
-  
+
+  constructor(props){
+    super(props);
+    this.state = {
+      masterDreamList:{},
+      selectedDream: null
+    }
+  };
+
   render() {
+    console.log("this is the master dream list " + this.state.masterDreamList);
     return (
       <BrowserRouter>
         <div>
