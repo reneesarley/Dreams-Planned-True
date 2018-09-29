@@ -1,31 +1,32 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import PropTypes from 'prop-types';
+import {BrowserRouter, Route, Switch, withRouter} from 'react-router-dom';
 import Dashboard from './components/dashboard/dashboard';
 import NavBar from './components/navigation/navBar';
 import DreamDetails from './components/dreams/dreamDetails';
 import Profile from './components/profile/profile';
 import CreateDream from './components/dreams/createDream';
-import './App.css';
+import { connect } from 'react-redux';
 
 class App extends Component {
 
   constructor(props){
     super(props);
     this.state = {
-      masterDreamList:{},
       selectedDream: null
     }
   };
 
   render() {
-    console.log("this is the master dream list " + this.state.masterDreamList);
     return (
       <BrowserRouter>
         <div>
           <NavBar/>
           <div className="container" style={styles.container}>
             <Switch>
-              <Route exact path='/' component={Dashboard}/>
+              <Route exact path='/' render={(props)=><Dashboard dreamList={this.props.masterDreamList}
+                currentRouterPath={props.location.pathname}
+                selectedDream={this.state.selectedDream}/>} />
               <Route path='/dreamdetails/:id' component={DreamDetails}/>
               <Route path='/profile' component={Profile}/>
               <Route path = '/createdream' component={CreateDream}/>
@@ -44,4 +45,15 @@ const styles={
   }
 }
 
-export default App;
+
+const mapStateToProps = state => {
+  return{
+     masterDreamList: state.masterDreamList
+   };
+}
+
+App.propTypes = {
+  masterDreamList: PropTypes.object
+};
+
+export default connect(mapStateToProps)(App);

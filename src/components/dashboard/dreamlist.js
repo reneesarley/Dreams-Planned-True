@@ -1,19 +1,23 @@
 import React from 'react';
 import DreamCard from '../dreams/dreamCard'
-const DreamList = () => {
+
+function DreamList(props) {
+  if(Object.keys(props.dreamList).length == 0){
+    return(
+      <div>
+        You haven't added any dreams yet.
+      </div>
+    );
+  }
   return(
     <div>
-      <h5>dreams</h5>
-      <div className="row">
-        <DreamCard/>
-        <DreamCard/>
-        <DreamCard/>
-        <DreamCard/>
-        <DreamCard/>
-      </div>
+      <hr/>
+        {Object.keys(props.dreamList).map(function(dreamId) {
+          var dream = props.dreamList[dreamId];
+          return <DreamCard name={dream.dreamName}/>;
+        })}
     </div>
   );
-
 }
 
 export default DreamList;

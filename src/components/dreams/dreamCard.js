@@ -4,7 +4,8 @@ import DreamDetails from './dreamDetails';
 import {Modal} from 'react-materialize';
 
 
-const DreamCard = () => {
+function DreamCard (props) {
+  console.log(props.dreamList)
   return(
     <div className='col s6 m6'>
       <Modal
@@ -13,7 +14,7 @@ const DreamCard = () => {
           <div style={styles.card}className="card">
             <div className="card-image">
               <img src={image} />
-              <div style={styles.dreamTitle} className="card-title" >buy a house</div>
+              <div style={styles.dreamTitle} className="card-title" >{props.name}</div>
               <div style={styles.dreamStatus} className="card-title" >status: <span style={styles.status}>still dreaming</span></div>
             </div>
           </div>

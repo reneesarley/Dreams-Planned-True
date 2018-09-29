@@ -1,6 +1,6 @@
-import dreamReducer from '../../reducers/dream-reducer';
+import dreamListReducer from '../../reducers/dream-list-reducer';
 
-describe('dreamReducer', () => {
+describe('dreamListReducer', () => {
 
   let action;
   const sampleDreamData = {
@@ -11,7 +11,7 @@ describe('dreamReducer', () => {
   };
 
   test('Should return default state if no action type is recoginized', () => {
-    expect(dreamReducer({},{type:null})).toEqual({});
+    expect(dreamListReducer({},{type:null})).toEqual({});
   });
 
 
@@ -24,7 +24,7 @@ describe('dreamReducer', () => {
       dreamImage : dreamImage,
       id: id
     };
-    expect(dreamReducer({}, action)).toEqual({
+    expect(dreamListReducer({}, action)).toEqual({
       [id] : {
         dreamName : dreamName,
         dreamDetails : dreamDetails,

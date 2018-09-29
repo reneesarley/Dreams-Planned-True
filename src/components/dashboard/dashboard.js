@@ -7,7 +7,7 @@ class Dashboard extends Component{
     return(
       <div className='row'>
         <div className='col s8'>
-          <DreamList/>
+          <DreamList dreamList={this.props.dreamList}/>
         </div>
         <div className='col s4'>
           <UpcomingToDos/>
