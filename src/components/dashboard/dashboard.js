@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import UpcomingToDos from './upcomingtodos';
 import DreamList from './dreamlist';
+import { connect } from 'react-redux';
 
 class Dashboard extends Component{
   render(){
+    console.log(this.props);
     return(
       <div className='row'>
         <div className='col s8'>
@@ -16,7 +18,11 @@ class Dashboard extends Component{
 
     );
   }
-
+}
+const mapStateToProps=(state) => {
+  return{
+    dreamList: state.masterDreamList
+  }
 }
 
-export default Dashboard;
+export default connect(mapStateToProps)(Dashboard);

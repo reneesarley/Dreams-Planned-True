@@ -26,7 +26,7 @@ class App extends Component {
           <NavBar/>
           <div className="container" style={styles.container}>
             <Switch>
-              <Route exact path='/' render={(props)=><Dashboard dreamList={this.props.masterDreamList}
+              <Route exact path='/' render={(props)=><Dashboard
                 currentRouterPath={props.location.pathname}
                 selectedDream={this.state.selectedDream}/>} />
               <Route path='/dreamdetails/:id' component={DreamDetails}/>
@@ -50,14 +50,4 @@ const styles={
 }
 
 
-const mapStateToProps = state => {
-  return{
-     masterDreamList: state.masterDreamList
-   };
-}
-
-App.propTypes = {
-  masterDreamList: PropTypes.object
-};
-
-export default connect(mapStateToProps)(App);
+export default App;
