@@ -10,17 +10,26 @@ class CreateDream extends Component {
     dreamName: null,
     dreamImage: null,
     dreamDetails: null,
+    id: null,
   }
-
 
   onFileLoad = (e, file) => console.log(e.target.result, file.name);
 
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value
+    })
+    console.log(this.state)
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
+    this.setState({
+      id: v4()
+    })
     this.props.addDream(this.state);
-    this.state.dreamName.value= '';
-    this.state.dreamDetails.value='';
     document.getElementById('addDreamForm').reset();
+    console.log(this.state);
   }
 
   render(){
@@ -30,17 +39,10 @@ class CreateDream extends Component {
           <div className='row'>
             <div className="input-field">
               <label htmlFor="dreamName">give your dream a short name</label>
-              <input
-                id="dreamName"
-                type="text"
-                className="validate"
-                ref={(input)=>{this.state.dreamName = input;}}/>
+              <input id="dreamName" type="text" className="validate" onChange={this.handleChange} />
             </div>
             <div className='input-field'>
-              <input
-                id="dreamDetails"
-                type="text"
-                ref={(input)=>{this.state.dreamDetails = input;}}/>
+              <input id="dreamDetails" type="text" onChange={this.handleChange}/>
               <label htmlFor="dreamDetails">addtional details (optional)</label>
             </div>
             <button
