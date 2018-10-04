@@ -1,10 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const SignedOutLinks = () => {
   return(
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
+    <ul class="right">
+      <li><a href="/signin">sign in</a></li>
+      <li><a href="/signup">sign up</a></li>
     </ul>
   );
 

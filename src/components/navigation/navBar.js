@@ -12,6 +12,7 @@ class NavBar extends Component {
           <div className="nav-wrapper blue-grey darken-3">
             <a href="/"  style={styles.logo}>dreams planned true</a>
             <SignedInLinks/>
+            <SignedOutLinks/>
           </div>
         </nav>
           <CreateDream/>

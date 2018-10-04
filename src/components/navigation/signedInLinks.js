@@ -1,8 +1,9 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 const SignedInLinks = () => {
   return(
-    <ul id="nav-mobile" className="right hide-on-med-and-down modal-trigger">
+    <ul className="right modal-trigger">
       <li><a href="#modal1">add dream</a></li>
       <li><a href="/">log out</a></li>
     </ul>
