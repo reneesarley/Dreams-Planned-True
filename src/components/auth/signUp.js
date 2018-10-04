@@ -22,7 +22,7 @@ class SignUp extends Component {
     return(
       <div className="container">
         <form onSubmit={this.handleSubmit}>
-          <h5>sign In</h5>
+          <h5>sign up</h5>
           <div className="input-field">
             <label htmlFor='firstName'>first name</label>
             <input type='text' id='firstName' onChange={this.handleChange}/>
