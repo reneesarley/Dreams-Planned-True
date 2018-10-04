@@ -28,6 +28,8 @@ export default (state = initState, action) => {
         id: id
       }
     });
+  case 'ADD_DREAM_ERROR':
+    console.log('add dream error', action.err) ;
     return newState;
   default:
     return state;
