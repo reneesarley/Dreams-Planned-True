@@ -7,6 +7,7 @@ import DreamDetails from './components/dreams/dreamDetails';
 import Profile from './components/profile/profile';
 import CreateDream from './components/dreams/createDream';
 import { connect } from 'react-redux';
+import SignIn from './components/auth/signIn'
 
 class App extends Component {
 
@@ -29,6 +30,7 @@ class App extends Component {
                 selectedDream={this.state.selectedDream}/>} />
               <Route path='/dreamdetails/:id' component={DreamDetails}/>
               <Route path='/profile' component={Profile}/>
+              <Route path = '/signin' component={SignIn}/>
               <Route path = '/createdream' component={CreateDream}/>
             </Switch>
           </div>

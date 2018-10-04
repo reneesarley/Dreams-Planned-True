@@ -2,12 +2,15 @@ import React from 'react';
 import { Modal } from 'react-materialize';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
+import Upload from 'material-ui-upload/Upload';
 
 let CreateDream = (props) => {
   console.log(props);
   let _dreamName= null;
   let _dreamImage = null;
   let _dreamDetails= null;
+
+  let onFileLoad = (e, file) => console.log(e.target.result, file.name);
 
   function handleCreateDream(e){
     const { dispatch } = props;
@@ -22,8 +25,6 @@ let CreateDream = (props) => {
     dispatch(action);
     _dreamName.value= '';
     _dreamDetails.value='';
-    console.log("at the end of the function the dream name is " + _dreamName)
-
   }
 
   return(
@@ -43,6 +44,12 @@ let CreateDream = (props) => {
             id="dreamDetails"
             type="text"
             ref={(input)=>{_dreamDetails = input;}}/>
+          <button
+             containerElement='label'
+             label='My Label'
+              onClick={onFileLoad}>
+             <input type="file" />  
+          </button>
         </div>
         <button className='btn lime'type='submit'>add dream</button>
       </form>
