@@ -4,12 +4,13 @@ import { HashRouter } from 'react-router-dom';
 import './index.css';
 import App from './App.js';
 import registerServiceWorker from './registerServiceWorker';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import dreamListReducer from './reducers/dream-list-reducer';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/index';
+import thunk from 'redux-thunk';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 let unsubscribe = store.subscribe(() =>
   console.log(store.getState())
