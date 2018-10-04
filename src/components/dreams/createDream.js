@@ -31,24 +31,26 @@ let CreateDream = (props) => {
     <Modal id='modal1'className='modal'>
       <form id='addDreamForm'onSubmit={handleCreateDream}className="col s12">
         <div className='row'>
-          <label htmlFor="dreamName">give your dream a short name</label>
-          <input
-            placeholder="ie. buy a house, or run a marathon"
-            id="dreamName"
-            type="text"
-            className="validate"
-            ref={(input)=>{_dreamName = input;}}/>
-          <label htmlFor="dreamDetails">addtional details (optional)</label>
-          <input
-            placeholder='buy a house in portland in 5 years'
-            id="dreamDetails"
-            type="text"
-            ref={(input)=>{_dreamDetails = input;}}/>
+          <div className="input-field">
+            <label htmlFor="dreamName">give your dream a short name</label>
+            <input
+              id="dreamName"
+              type="text"
+              className="validate"
+              ref={(input)=>{_dreamName = input;}}/>
+          </div>
+          <div className='input-field'>
+            <input
+              id="dreamDetails"
+              type="text"
+              ref={(input)=>{_dreamDetails = input;}}/>
+            <label htmlFor="dreamDetails">addtional details (optional)</label>
+          </div>
           <button
              containerElement='label'
              label='My Label'
               onClick={onFileLoad}>
-             <input type="file" />  
+             <input type="file" />
           </button>
         </div>
         <button className='btn lime'type='submit'>add dream</button>
