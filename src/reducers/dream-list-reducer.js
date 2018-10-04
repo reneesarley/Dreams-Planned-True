@@ -3,12 +3,14 @@ const initState = {
       dreamName: 'buy a house',
       dreamDetails: 'buy a house in portland',
       dreamImage: 'no image yet',
+      status: "still dreaming",
       id: '123'
     },
     ['124']: {
       dreamName: 'adopt a senior dog',
       dreamDetails: '',
       dreamImage: 'no image yet',
+      status: "completed!",
       id: '124'
     },
 }
@@ -22,6 +24,7 @@ export default (state = initState, action) => {
         dreamName: dreamName,
         dreamDetails: dreamDetails,
         dreamImage: dreamImage,
+        status: "still dreaming",
         id: id
       }
     });

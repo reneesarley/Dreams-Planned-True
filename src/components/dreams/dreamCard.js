@@ -15,7 +15,7 @@ function DreamCard (props) {
             <div className="card-image">
               <img src={image} />
               <div style={styles.dreamTitle} className="card-title" >{props.name}</div>
-              <div style={styles.dreamStatus} className="card-title" >status: <span style={styles.status}>still dreaming</span></div>
+              <div style={styles.dreamStatus} className="card-title" >status: <span style={styles.status}>{props.status}</span></div>
             </div>
           </div>
         </a>}>

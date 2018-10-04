@@ -14,7 +14,9 @@ function DreamList(props) {
       <hr/>
         {Object.keys(props.dreamList).map(function(dreamId) {
           var dream = props.dreamList[dreamId];
-          return <DreamCard name={dream.dreamName}/>;
+          return <DreamCard
+                  name={dream.dreamName}
+                  status={dream.status}/>;
         })}
     </div>
   );
